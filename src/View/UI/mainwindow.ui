@@ -19,7 +19,7 @@ background-color: white;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="ViewerWidget" name="openGLWidget">
+   <widget class="s21::ViewerWidget" name="openGLWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -1262,9 +1262,9 @@ color:white;
  </widget>
  <customwidgets>
   <customwidget>
-   <class>ViewerWidget</class>
+   <class>s21::ViewerWidget</class>
    <extends>QOpenGLWidget</extends>
-   <header>viewerwidget.h</header>
+   <header>View/viewerwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

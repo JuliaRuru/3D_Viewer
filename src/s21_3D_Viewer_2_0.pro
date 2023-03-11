@@ -1,4 +1,4 @@
-QT       += core gui opengl widgets openglwidgets
+QT += core gui opengl widgets openglwidgets
 include(misc/QtGifImage/src/gifimage/qtgifimage.pri)
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -10,20 +10,24 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 #LIBS += -lopengl32
 
 SOURCES += \
-    engine.cpp \
+    View/engine.cpp \
     main.cpp \
-    mainwindow.cpp \
-    rendering_calculations.c \
-    viewerwidget.cpp
+    View/mainwindow.cpp \
+    Model/s21_viewer.cpp \
+    View/viewerwidget.cpp \
+    Controller/controller.cpp \
+    Model/s21_matrix_oop.cpp
 
 HEADERS += \
-    engine.h \
-    mainwindow.h \
-    rendering_calculations.h \
-    viewerwidget.h
+    View/engine.h \
+    View/mainwindow.h \
+    Model/s21_viewer.h \
+    View/viewerwidget.h \
+    Controller/controller.h \
+    Model/s21_matrix_oop.h
 
 FORMS += \
-    mainwindow.ui
+    View/UI/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -37,4 +41,8 @@ DISTFILES += \
     misc/QtGifImage/src/gifimage/qtgifimage.pri
 
 RESOURCES += \
-    shaders.qrc
+    View/shaders.qrc
+
+CONFIG += sdk_no_version_check
+CONFIG += c++17
+
